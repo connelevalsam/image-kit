@@ -4,6 +4,9 @@
 	<title>ImageKit</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js" ></script>
 	<style type="text/css">
 		.mark {
 			background-image: url(https://ik.imagekit.io/demo/imagekitwebsite/static/img/landingpage-icons/check.svg);
@@ -15,28 +18,51 @@
 		    background-repeat: no-repeat;
 		    vertical-align: middle;
 		}
+		.bgs {
+			background: #F4F5F8;
+		}
+		.btn {
+			    border-radius: 3px;
+			    display: inline-block;
+			    text-align: center;
+			    cursor: pointer;
+			    color: white;
+			    outline: none;
+			    line-height: 40px;
+			    width: auto;
+			    min-width: 170px;
+			    padding: 0 20px;
+			    transition-duration: 150ms;
+			    background-color: #3E82F7;
+			    border: solid 1px transparent;
+		}
+		.footColor {
+			background: #262B37;
+		}
 	</style>
 </head>
-<body class="w-100 sans-serif">
+<body class="w-100" style="font-family: 'Open Sans',sans-serif;">
     <main class="w-100">
     <!-- Header -->
     	<header class="w-100 ph2 ph5-ns">
     		<div class="pt3 cf">
-    			<div class="db dtc-ns v-mid w-30 fl">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">ImageKit</a>
-				</div><nav class="fl pv3 w-70">
-					<a href="features.html" class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Features</a>
-					<a href="pricing.html" class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Pricing</a>
-					<a href="website-analyzer.html" class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-					<a class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
-					<a class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
-					<a class="f5 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
+    			<div class="db dtc-ns v-mid w-20-l fl">
+					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
+					</a>
+				</div><nav class="db dtc-ns v-mid lh-copy fl w-80-l">
+					<a href="features.html" class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Features</a>
+					<a href="pricing.html" class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Pricing</a>
+					<a href="website-analyzer.html" class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
+					<a class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
+					<a class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
+					<a class="f6 fw1 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
 				</nav>
     		</div>
     		<div class="w-100 pt5-ns tc pb5">
     			<div class="mh2">
-    				<h1 class="black-80 fw6">Instant image optimization on all platforms</h1>
-	    			<h2 class="f4 fw1 black-70">Intelligent real time image optimization, resizing, cropping and super fast delivery</h2>
+    				<h1 class="black-80 f3 f2-l fw6 ma0">Instant image optimization on all platforms</h1>
+	    			<h2 class="f4 fw2 black-70">Intelligent real time image optimization, resizing, cropping and super fast delivery</h2>
 	    			<div class="mt5">
 	    				<a href="#" class="f4 fw2 dib bg-blue white br2 pv2 ph3 dim no-underline">
 	    				create free acount</a>
@@ -47,113 +73,89 @@
     	<!-- content -->
     	<section class="w-100">
     	<!-- 1 content -->
-    		<div class="w-100 bg-washed-blue ph2 ph5-ns pb2 pb5 pt5 cf">
+    		<div class="w-100 bgs ph2 ph5-ns pb2 pb5 pt2-m pt5 cf">
     			<article class="w-100 w-50-l ph2 pb4-m fr-l">
-    				<div>
-    					<div class="pt5 ph2 v-top dib w-40 tc">
-					        <img src="http://placehold.it/150x150" class="cover"><br>
-					        <span>Original Image</span>
-				        </div><div class="dib w-60">
-					        <div class="dib w-50"><img src="http://placehold.it/120x100" class="cover pb2"></div><div class="dib w-50 v-top"><span class="f6">Resized 300x200 image</span></div>
-					        <div class="dib w-50"><img src="http://placehold.it/120x120" class="cover pb2"></div><div class="dib w-50 v-top"><span class="f6 fw1">Smart cropped thumbnail image</span></div>
-					        <div class="dib w-50"><img src="http://placehold.it/120x100" class="cover"></div><div class="dib w-50 v-top"><span  class="f6">Resized and blur image</span></div>
-				        </div>
-    				</div>
+    			    <img src="https://ik.imagekit.io/demo/img/tr:w-590/website_assets/transformations.png" class="cover">
     			</article>
-    			<article class="w-100 w-50-l ph2 pt3-m fl-l Open sans-serif">
-    			    <h2 class="black-80 pv3-m"> Dynamic image resizing and transformation</h2>
+    			<article class="w-100 w-50-l ph2 pt3-m fl-l">
+    			    <h2 class="black-70 fw6 lh-copy mv4 mv5-l"> Dynamic image resizing and transformation</h2>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Generate different sizes and variations of an image directly from the image URL</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Generate different sizes and variations of an image directly from the image URL</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">No need to create and store multiple image variations</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">No need to create and store multiple image variations</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Decouple your UI with images and easily change the layout</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Decouple your UI with images and easily change the layout</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Create perfect responsive visual experiences across devices</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Create perfect responsive visual experiences across devices</span>
     				</div>
     			</article>
     		</div>
     	<!-- 2 content -->
-    	    <div class="w-100 bg-white ph2 ph5-ns pb4 pb5-ns pt4 pt5-ns cf">
-    			<article class="w-100 w-50-l ph2 fl">
-    				<div class="pv4">
-    					<div class="ph2 w-100 pt3">
-					        <div class="w-50 dib pa2">
-					        	<img src="http://placehold.it/200x150" class="cover"><br>
-					        	<span  class="f6">Original image<br><h2 class="mv4 mv1-ns f6 f3-ns black-80">120kb</h2></span>
-					        </div><div class="w-50 dib pa2">
-					        	<img src="http://placehold.it/200x150" class="cover"><br>
-					        	<span  class="f6">Optimized with ImageKit.cb<br><h2 class="mv1 f6 f3-ns black-80">56kb(>50% smaller)</h2></span>
-					        </div>
-				        </div>
-    				</div>
+    	    <div class="w-100 bg-white ph2 ph5-ns pb4 pb5-ns pt4 pt2-m cf">
+    			<article class="w-100 w-50-l ph2 fl h6 mv4 mv5-l">
+    				<img src="https://ik.imagekit.io/demo/img/tr:w-500/website_assets/optimization.png" class="cover">
     			</article>
-    			<article class="w-100 w-50-l pt3-m ph2 fl-l Open sans-serif">
-    			    <h2 class="black-80 pb4 pv3-m">  Reduce image size not visual quality </h2>
+    			<article class="w-100 w-50-l pt3-m ph2 fl-l h6">
+    			    <h2 class="black-70 fw6 lh-copy mv4 mv5-l">  Reduce image size not visual quality </h2>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Intelligent compression based on structural similarity</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Intelligent compression based on structural similarity</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Get high quality images in smaller file size</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Get high quality images in smaller file size</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Automatic format selection based on user device, image content and quality settings</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Automatic format selection based on user device, image content and quality settings</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">webP support</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">webP support</span>
     				</div>
     			</article>
     		</div>
     	<!-- 3 content -->
-    	    <div class="w-100 bg-washed-blue ph2 ph5-ns pb4 pb5-ns pt2 pt5-ns cf">
-    			<article class="w-100 w-50-l ph2 fr-l tc">
-    				<div class="pt4 dib">
-    					<div class="ph2 w-100 pt3">
-					        <img src="http://placehold.it/400x300" class="cover db">
-				        </div>
-    				</div>
+    	    <div class="w-100 bgs ph2 ph5-ns pb4 pb5-ns pt2 cf">
+    			<article class="w-100 w-50-l ph2 fr-l tc mv4">
+    				<img src="https://ik.imagekit.io/demo/img/tr:w-400/website_assets/platforms.png" class="cover">
     			</article>
     			<article class="w-100 w-50-l ph2 fl-l sans-serif">
-    			    <h2 class="black-80 pb4"> 5-minute integration with leading platforms </h2>
+    			    <h2 class="black-70 fw6 lh-copy mv4 mv5-l"> 5-minute integration with leading platforms </h2>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">No need to upload existing images on ImageKit</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">No need to upload existing images on ImageKit</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Works with your existing Amazon S3 bucket or webserver</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Works with your existing Amazon S3 bucket or webserver</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Your existing image workflow remains same</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Your existing image workflow remains same</span>
     				</div>
     				<div class="w-100 pb2">
-    					<div class="mark"></div><span class="f5 fw1 black-70">Start delivering optimized and resized images on your own domain</span>
+    					<div class="mark"></div><span class="f6 fw4 black-80 lh-copy">Start delivering optimized and resized images on your own domain</span>
     				</div>
     			</article>
     		</div>
     	<!-- 4 content -->
-    	    <div class="w-100 bg-white ph2 ph5-ns pb2 pb5-ns pt5">
+    	    <div class="w-100 bg-white ph2 ph5-ns pb2 pb5-ns">
     			<div class="w-100 tc">
-    				<h2 class="black-80 pb4">3-steps away from a faster website</h2>
-    				<div class="w-100 cover bg-center h4 h5-ns" style="background-image: url(http://placehold.it/400x300);">
-    				</div>
+    				<h2 class="black-70 fw6 lh-copy mv4 mv5-l">3-steps away from a faster website</h2>
+    				<img src="https://ik.imagekit.io/demo/img/tr:f-png,w-900/website_assets/5-minute_2x.png" class="cover">
     			</div>
     		</div>
     	<!-- 5 content -->
-    	    <div class="w-100 bg-washed-blue ph2 ph5-ns pb2 pb4-ns pt3">
+    	    <div class="w-100 bgs ph2 ph5-ns pb2 pb4-ns pt3">
     			<div class="w-100 tc">
-    				<h2 class="black-80 f3">Sign up for a zero risk 30 days trial</h2>
-    				<h2 class="f4 fw1 black-70">200+ websites and apps trust ImageKit with their images</h2>
+    				<h2 class="black-80 f3 fw6 lh-copy">Sign up for a zero risk 30 days trial</h2>
+    				<h2 class="f5 fw4 ph3 lh-copy black-60">200+ websites and apps trust ImageKit with their images</h2>
 	    			<div class="">
-	    				<a href="#" class="f4 fw2 dib bg-blue white br2 pv2 ph3 dim no-underline">
-	    				create free acount</a>
+	    				<a href="#" class="btn no-underline">
+	    				Create free acount</a>
 	    			</div>
     			</div>
     		</div>
     	<!-- 6 content slider -->
     	    <div class="w-100 bg-white ph2 ph5-ns pb2 pb3-ns pt3">
-    			<div class="w-100 nowrap overflow-x-auto">
+    			<div class="w-100 nowrap overflow-hidden customers">
     				<a href="#" class="dib pv2 ph3 dim no-underline">
     					<img src="http://placehold.it/100x100" class="cover db">
     				</a><a href="#" class="dib pv2 ph3 dim no-underline">
@@ -188,21 +190,37 @@
     	</section>
     	<!-- footer -->
     	<footer>
-    		<div class="bg-navy tc pv3 ph3">
-    			<nav class="w-100 white-80 pv3 lh-copy">
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">About us</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Features</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Docs</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Pricing</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Terms</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Privacy Policy</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Disclaimer</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Login</a>
-					<a class="f6 fw1 link pointer ttu mr2 mr3-m mr4-l dib">Sign up</a>
+    		<div class="footColor tc pv3 ph3">
+    			<nav class="w-100 white pv3 lh-copy">
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">About us</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Features</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Docs</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Pricing</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Terms</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Privacy Policy</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Disclaimer</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Login</a>
+					<a class="f6 fw4 link pointer ttu mr2 mr3-m mr4-l dib">Sign up</a>
 				</nav>
 				<small class="white">Copyright &copy; 2017 ImageKit</small>
     		</div>
     	</footer>
     </main>
+    <script type="text/javascript">
+    	var len = $(".customers a").length;
+
+	    setTimeout(function() {
+	        moveCusSlider(3);
+	    },15000);
+
+	    function moveCusSlider(i) {
+	        if(i>len) i = 0;
+	        $(".customers").animate({scrollLeft:i*210}, 500);
+	        if(i==0) i=1;
+	        setTimeout(function() {
+	            moveCusSlider(i*3);
+	        }, 3000);
+	    }
+    </script>
 </body>
 </html>
