@@ -5,191 +5,213 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+	<style type="text/css">
+		.bgs {
+			background: #F4F5F8;
+		}
+		.bgColour {
+	    	background: #262B37;
+	    }
+		.bgColor:hover {
+			background: #262B37;
+		}
+		.btn {
+			    border-radius: 3px;
+			    display: inline-block;
+			    text-align: center;
+			    cursor: pointer;
+			    color: white;
+			    outline: none;
+			    line-height: 40px;
+			    width: auto;
+			    min-width: 170px;
+			    padding: 0 20px;
+			    transition-duration: 150ms;
+			    background-color: #3E82F7;
+			    border: solid 1px transparent;
+		}
+		.footColor {
+			background: #262B37;
+		}
+	</style>
 </head>
 <body class="w-100" style="font-family: 'Open Sans',sans-serif;">
     <main class="w-100">
     <!-- Header -->
-    	<header class="w-100 ph2 ph5-ns">
-    		<div class="w-100 pv3">
+    	<header class="w-100 pv3">
+    		<div class="w-100 pv3 ph2 ph5-ns">
     			<div class="db dtc-ns v-mid fl w-100 w-20-l">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">ImageKit</a>
-				</div><div class="w-70 w-60-l fl">
-					<a href="#" class="f6 fw5 br2 pa2 bg-black white link pointer ttu mr2 mr3-m mr4-l dib no-underline">Features</a>
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Pricing</a>
-					<a href="website-analyzer.html" class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
-				</div><div class="fl w-30 w-20-l pv2 tc">
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
+					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
+					</a>
+				</div><div class="w-100 w-80-l fl cf">
+					<div class="w-100 w-70-l fl v-top">
+						<a href="#" class="f6 fw5 bgColour white br2 pa2 link pointer ttu mr2 mr3-m mr4-l dib no-underline">Features</a>
+						<a href="pricing.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Pricing</a>
+						<a href="website-analyzer.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
+					</div><div class="fl w-100 w-30-l tc v-top">
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
+					</div>
 				</div>
     		</div>
     	</header>
-    	<div class="w-100 pt4 mt5 mt1-l"><hr class="b--black-20"></div>
     	<section class="w-100">
     	<!-- Transforming -->
-    		<div class="ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="ph3 ph5-ns pv4 pt5-l tc bt b--black-20 mt3">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/transform.svg?hash=8eef3deb3363a3c0c2669a100b033e10" class="cover">
     				<h1 class="fw1 mv0 black-70">Transformation</h1>
-    				<h5 class="fw4 mv0 black-80">GET THE EXACT IMAGE</h5>
+    				<h5 class="f6 fw4 mv0 black-80">GET THE EXACT IMAGE</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l cf">
-					<div class="fr-l w-100 w-50-l  pb4 pb0-l">
-						<img src="http://placehold.it/300x300" class="cover">
+					<div class="dn dib-ns fr-l w-100 w-50-l pb4 pb0-l">
+						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/transformation.gif?hash=c326bc99309e629fe7dcd6b7c9e3b13e" class="cover">
 					</div><div class="fl-l w-100 w-50-l">
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">URL-based transformations</h2>
-							<p class="mv0 fw4 black-80">All available transformations, like resize, crop, watermarking etc, can be applied on any image directly from the image URL.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">The perfect image</h2>
-							<p class="mv0 black-80 fw4">Different devices require different variations of the same image. Deliver the perfect image every time for a great user experience.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Named and Chainable transformations</h2>
-							<p class="mv0 black-80 fw4">Name a collection of transformations to make it easier to remember for when using in URLs. And run as many transformations as needed one after the other directly from the URL.</p>
+						<article class="lh-copy tl pt4">
+							<h2 class="mv0 f4 fw6 black-80">URL-based transformations</h2>
+							<p class="mv0 f5 black-80">All available transformations, like resize, crop, watermarking etc, can be applied on any image directly from the image URL.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">The perfect image</h2>
+							<p class="mv0 black-80 f5">Different devices require different variations of the same image. Deliver the perfect image every time for a great user experience.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Named and Chainable transformations</h2>
+							<p class="mv0 black-80 f5">Name a collection of transformations to make it easier to remember for when using in URLs. And run as many transformations as needed one after the other directly from the URL.</p>
 						</article>
 					</div>
 				</div>
     		</div>
     		<!-- optimizing -->
-    		<div class="bg-washed-blue ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="bgs ph3 ph5-ns pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/optimize.svg?hash=8a27b2cc4e0c4ff19e16923094ff1821" class="cover">
     				<h1 class="fw1 mv0 black-70">Optimization</h1>
-    				<h5 class="fw4 mv0 black-80">BETTER IMAGES. SMALLER SIZE</h5>
+    				<h5 class="f6 fw4 mv0 black-80">BETTER IMAGES. SMALLER SIZE</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l">
     			<!-- images left -->
-					<div class="dib w-100 w-50-l">
-						<div class="w-100 pv3 pr5-l">
-							<div class="w-50 dib pa2 pa3-ns">
-							    <img src="http://placehold.it/300x300" class="cover">
-							    <p class="mv0">Original Image (Phone Camara)<br>160MB</p>
-							</div><div class="w-50 dib pa2 pa3-ns">
-							    <img src="http://placehold.it/300x300" class="cover">
-							    <p class="mv0">Using default settings<br> of ImageKit</p>
-							</div>
+					<div class="dn dib-ns w-100 w-50-l">
+						<div class="w-100 pa5 tr-l">
+							<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/optimise.jpg?hash=e70d7d3dc4023dbdb4e2e875dc60d311" class="cover">
 						</div>
-					</div><div class="dib w-100 w-50-l"> <!-- articles right -->
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">Same quality in lesser KBs</h2>
+					</div><div class="dib w-100 w-50-l v-top-l pt5-l"> <!-- articles right -->
+						<article class="lh-copy tl">
+							<h2 class="mv0 f4 fw6 black-80">Same quality in lesser KBs</h2>
 							<p class="mv0 fw4 black-80">ImageKit uses a combination of lossy and lossless compression techniques to deliver images at a significantly reduced size without compromising on quality.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Format optimization</h2>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Format optimization</h2>
 							<p class="mv0 black-80 fw4">ImageKit automatically uses modern, high-compression image format WebP wherever possible providing a further 30-40% improvement in load time as compared to the most optimised JPEG images.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Configurable</h2>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Configurable</h2>
 							<p class="mv0 black-80 fw4">If you don't like the default optimisations for your use case, you can always change that from your dashboard settings. The changes to default settings would reflect instantly.</p>
 						</article>
 					</div>
 				</div>
     		</div>
     		<!-- migration -->
-    		<div class="bg-white ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="bg-white ph3 ph5-ns pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/migration.svg?hash=fe0cf7019369bf1971546a2782d31bac" class="cover">
     				<h1 class="fw1 mv0 black-70">Migration</h1>
-    				<h5 class="fw4 mv0 black-80">FOR YOUR EXISTING IMAGES</h5>
+    				<h5 class="f6 fw4 mv0 black-80">FOR YOUR EXISTING IMAGES</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l">
     			<!-- images left -->
-					<div class="dib w-100 pb4 pb0-l w-50-l">
-						<img src="http://placehold.it/300x300" class="cover">
-					</div><div class="dib w-100 w-50-l"> <!-- articles right -->
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">Blah blah blah</h2>
-							<p class="mv0 fw4 black-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<div class="dn dib-ns w-100 w-50-l">
+						<div class="w-100 pa5">
+							<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/migration.png?hash=b76bd5bf9244c4c4f73acf2a46d8990a" class="cover">
+						</div>
+					</div><div class="dib w-100 w-50-l v-top-l pt5-l"> <!-- articles right -->
+						<article class="lh-copy tl">
+							<h2 class="mv0 f4 fw6 black-80">Plug and Play</h2>
+							<p class="mv0 fw4 black-80">Attach an existing image store like S3 or a static image server like Nginx to your ImageKit account</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Migration on the fly</h2>
+							<p class="mv0 black-80 fw4">Your existing images become accessible via ImageKit instantly and are automatically migrated whenever you request them using ImageKit URLs</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Instant performance boost</h2>
+							<p class="mv0 black-80 fw4">All optimisations work on your existing images as soon as you switch to ImageKit. Automatically.</p>
 						</article>
 					</div>
 				</div>
     		</div>
     		<!-- storage -->
-    		<div class="bg-washed-blue ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="bgs ph3 ph5-ns pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/storage.svg?hash=6236604c55b2d56eb18caa38f786b710" class="cover">
     				<h1 class="fw1 mv0 black-70">Storage</h1>
-    				<h5 class="fw4 mv0 black-80">FOR ALL YOUR IMAGES - RAW &amp; TRANSFORMED</h5>
+    				<h5 class="f6 fw4 mv0 black-80">FOR ALL YOUR IMAGES - RAW &amp; TRANSFORMED</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l">
     			<!-- images left -->
-					<div class="dib w-100 w-50-l pb4 pb0-l">
-						<img src="http://placehold.it/300x300" class="cover">
-					</div><div class="dib w-100 w-50-l"> <!-- articles right -->
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">Blah blah blah</h2>
-							<p class="mv0 fw4 black-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<div class="dn dib-ns w-100 w-50-l">
+						<div class="w-80 dib pa3">
+							<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/storage.png?hash=8e53fa33310bc48ad3dc4389456ea420" class="cover">
+						</div>
+					</div><div class="dib w-100 w-50-l v-top-l pt4-l"> <!-- articles right -->
+						<article class="lh-copy tl">
+							<h2 class="mv0 f4 fw6 black-80">Limitless</h2>
+							<p class="mv0 fw4 black-80">There are no limits to the number of images that can be stored with ImageKit. Your allocated storage grows as your business grows.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Easy Management</h2>
+							<p class="mv0 black-80 fw4">ImageKit comes with an easy to use media library where you can upload, view and manage all your images and their transformations.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Your storage. Your choice.</h2>
+							<p class="mv0 black-80 fw4">You can continue to use your own storage and plug it into ImageKit. Or use ImageKit's storage for your images. ImageKit manipulates and optimises all image requests on-the-fly.</p>
 						</article>
 					</div>
 				</div>
     		</div>
     		<!-- upload -->
-    		<div class="bg-white ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="bg-white ph3 ph5-ns pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/upload.svg?hash=7d5fd1b81e6eac92c921a794512dd7ef" class="cover">
     				<h1 class="fw1 mv0 black-70">Upload</h1>
-    				<h5 class="fw4 mv0 black-80">FOR YOUR NEW &amp; EXISTING IMAGES</h5>
+    				<h5 class="f6 fw4 mv0 black-80">FOR YOUR NEW &amp; EXISTING IMAGES</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l cf">
-    			    <div class="fr-l w-100 w-50-l pb4 pb0-l"> <!-- images right -->
-						<img src="http://placehold.it/300x300" class="cover">
+    			    <div class="db dib-ns fr-l w-100 w-50-l"> <!-- images right -->
+						<div class="w-80 dib pa3">
+							<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/code.png?hash=910b98dbd991e6ae4b065dfefc52be9d" class="cover">
+						</div>
 					</div><div class="fl-l w-100 w-50-l"> <!-- articles left -->
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">Blah blah blah</h2>
-							<p class="mv0 fw4 black-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						<article class="lh-copy tl">
+							<h2 class="mv0 f4 fw6 black-80">Scalable</h2>
+							<p class="mv0 fw4 black-80">Don't worry if you upload a few or several thousands of images daily. ImageKit scales efficiently as your traffic increases. No infrastructure headaches.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Drag &amp; Drop</h2>
+							<p class="mv0 black-80 fw4">You can use the ImageKit media library to upload your images directly to ImageKit's storage. Just drag and drop your images and get the uploaded image's URL.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">APIs and SDKs</h2>
+							<p class="mv0 black-80 fw4">Integrate our image upload API or use one of our SDKs to handle uploads to your ImageKit storage. SDKs are available for both client and server-side languages.</p>
 						</article>
 					</div>
 				</div>
     		</div>
     		<!-- Security -->
-    		<div class="bg-washed-blue ph2 ph5-ns pt3 pt5-l tc">
+    		<div class="bgs ph3 ph5-ns pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
-    				<img src="http://placehold.it/30x50" class="cover">
+    				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/lock.svg?hash=51b803ff984e9d9f07d98891492ed09a" class="cover">
     				<h1 class="fw1 mv0 black-70">Security</h1>
-    				<h5 class="fw4 mv0 black-80">KEEPING AWAY INTRUDERS</h5>
+    				<h5 class="f6 fw4 mv0 black-80">KEEPING AWAY INTRUDERS</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l">
     			<!-- images left -->
-					<div class="dib w-100 w-50-l pb4 pb0-l">
-						<img src="http://placehold.it/300x300" class="cover">
+					<div class="dn dib-ns w-100 w-50-l">
+						<div class="w-80 dib pa3">
+							<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/feature-page-images/security.png?hash=a2cf724dc9f8ab3428fedee74338cd4e" class="cover">
+						</div>
 					</div><div class="dib w-100 w-50-l"> <!-- articles right -->
-						<article class="measure lh-copy tl">
-							<h2 class="mv0 f4 fw5 black-80">Blah blah blah</h2>
-							<p class="mv0 fw4 black-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</p>
-						</article><article class="measure lh-copy tl pt3">
-							<h2 class="mv0 black-80 f4 fw5">Blah blah blah</h2>
-							<p class="mv0 black-80 fw4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						<article class="lh-copy tl">
+							<h2 class="mv0 f4 fw6 black-80">Signed images</h2>
+							<p class="mv0 fw4 black-80">With signed image requests, you can prevent any third party from modifying the transformation in the image URL and from using it after a pre-defined expiry time.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Transformation control</h2>
+							<p class="mv0 black-80 fw4">Limit the possible transformations that can be applied to your images directly from your dashboard to further restrict image use without your knowledge.</p>
+						</article><article class="lh-copy tl pt4">
+							<h2 class="mv0 black-80 f4 fw6">Secure Uploads</h2>
+							<p class="mv0 black-80 fw4">All image upload requests are signed and done over HTTPS to secure your images and storage from random third-party users.</p>
 						</article>
 					</div>
 				</div>
@@ -197,21 +219,21 @@
     	</section>
     	<!-- footer -->
     	<footer>
-    		<div class="bg-navy pv3 ph3 white-80">
-    		    <div class="w-100 w-25-ns dib v-top">
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">About ImageKit</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Terms of Use</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Privacy Policy</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Disclaimer</a><br>
-    		    </div><div class="w-100 w-25-ns dib v-top">
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Website analyzer</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Pricing</a><br>
-    		    </div><div class="w-100 w-25-ns dib v-top">
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Documentation</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Integration with Shopify</a><br>
-					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib">Integration for responsive images</a><br>
-    		    </div><div class="w-100 w-25-ns dib v-top">
-					<h1 class="f3 fw4 mv0">Have a specific requirement?</h1>
+    		<div class="footColor pv3 ph3 ph5-ns white">
+    		    <div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">About ImageKit</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Terms of Use</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Privacy Policy</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Disclaimer</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Website analyzer</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Pricing</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Documentation</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Integration with Shopify</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Integration for responsive images</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<h1 class="f4 fw6 mv0">Have a specific requirement?</h1>
     				<h3 class="fw4 mt0">Write to us on hello@imagekit.io</h3>
 				    <small class="white pt3">Copyright &copy; ImageKit Private Limited 2017</small>
     		    </div>

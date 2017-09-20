@@ -5,74 +5,127 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+	<style type="text/css">
+		.bgs {
+			background: #F4F5F8;
+		}
+		.bgColour {
+	    	background: #262B37;
+	    }
+		.bgColor:hover {
+			background: #262B37;
+		}
+		.btn {
+			    border-radius: 3px;
+			    display: inline-block;
+			    text-align: center;
+			    cursor: pointer;
+			    color: white;
+			    outline: none;
+			    line-height: 40px;
+			    width: auto;
+			    min-width: 170px;
+			    padding: 0 20px;
+			    transition-duration: 150ms;
+			    background-color: #3E82F7;
+			    border: solid 1px transparent;
+		}
+		.footColor {
+			background: #262B37;
+		}
+	</style>
 </head>
 <body class="w-100" style="font-family: 'Open Sans',sans-serif;">
     <main class="w-100">
     	<!-- Header -->
-    	<header class="w-100 ph2 ph5-ns pb6 pb4-l">
-    		<div class="w-100 pv3">
+    	<header class="w-100 pv3">
+    		<div class="w-100 pv3 ph2 ph5-ns">
     			<div class="db dtc-ns v-mid fl w-100 w-20-l">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">ImageKit</a>
-				</div><div class="w-70 w-60-l fl">
-					<a href="features.html" class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Features</a>
-					<a href="#" class="f6 fw5 br2 pa2 bg-black white link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Pricing</a>
-					<a href="website-analyzer.html" class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
-				</div><div class="fl w-30 w-20-l pv2 tc">
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
-					<a class="f6 fw5 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
+					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
+					</a>
+				</div><div class="w-100 w-80-l fl cf">
+					<div class="w-100 w-70-l fl v-top">
+						<a href="features.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Features</a>
+						<a href="#" class="f6 fw5 bgColour hover-white br2 pa2 link pointer ttu mr2 mr3-m mr4-l dib">Pricing</a>
+						<a href="website-analyzer.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Documentation</a>
+					</div><div class="fl w-100 w-30-l tc v-top">
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Login</a>
+						<a class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Sign up</a>
+					</div>
 				</div>
     		</div>
     	</header>
     	<!-- Section -->
-    	<section class="w-100 bg-washed-blue bt b--black-20">
-    		<div class="w-100 ph2 ph5-ns tc pv5">
-    			<h1 class="f1 fw6 black-80">Pay as you grow</h1>
-    			<span class="f3 fw4 black-70">Best-in-class CDN, global network of image optimisation servers and a failure-proof image storage</span>
-    		</div>
-    		<div class="ph3 ph5-l pb2 pb4-l">
-				<div class="ma2 cf">
-					<article class="center w-100 w-third-l fl bg-red" style="border-top-left-radius:10px; border-top-right-radius:10px;">
-						<div class="bg-white shadow-2 mt2  pb3 pb0-l tc">
-							<div class="pa2 h3">
-								<h3 class="f3 ma0">30-day free trial</h3>
+    	<section class="w-100">
+    	<!-- container -->
+    		<div class="ph3 ph5-l pv4 pt5-l tc bt b--black-20 mt3">
+    			<div class="ph3 pt3 center">
+    				<h1 class="f1 fw6 black-70">Pricing That Makes Sense</h1>
+    				<h5 class="f4 fw4 mv0 black-80">One flat monthly rate for your master images. Unlimited derivative images.</h5>
+    			</div>
+    			<div class="w-100 pt3 pv5-l cf">
+					<article class="center w-100 w-50-ns fl pr3 br3">
+						<div class="bg-white br3 shadow-2">
+							<div class="pv4" style="background-image: url(http://placehold.it/600x200); border-top-left-radius:8px; border-top-right-radius:8px;">
+								<h1>Standard</h1>
+							</div>
+							<div class="pa2 mv3 bb b--black-20 h3">
+								<h3 class="link pointer f4" href="#">
+								    $3 per 1,000 master images accessed each month. 8¢ per GB of CDN bandwidth for images delivered each month.
+								</h3>
 							</div>
 							<div>
 								<h4 class="pa2 h3 fw1">
-									Want to try ImageKit before moving to the unlimited plan?
+									Over 40 per cent of Syrian refugee children in Turkey are out of school
 								</h4>
 							</div>
-							<div class="pt4 pb2 tc"><a href="#" class="link pointer f4 pv2 ph5 ba b--blue-20 br2 hover-bg-blue hover-white blue no-underline">Select</a></div>
+							<div class="pt4 tc"><a href="#" class="link pointer f4 navy no-underline">Read More</a></div>
 						</div>
-					</article><article class="center w-100 w-third-l fl bg-green mt3 mt0-l" style="border-top-left-radius:10px; border-top-right-radius:10px;">
-						<div class="bg-white shadow-2 mt2  pb3 pb0-l tc">
+					</article><article class="center w-100 w-50-ns pl3 fl br3" >
+						<div class="bg-white br3 shadow-2">
+							<div class="pv4" style="background-image: url(http://placehold.it/600x200); border-top-left-radius:8px; border-top-right-radius:8px;">
+								<h1>Premium</h1>
+							</div>
 							<div class="pa2 h3">
-								<h3 class="f3 ma0">$19</h3>
-								<span>per month</span>
+								<h3 class="link pointer f4" href="#">
+									For high volume, high bandwidth, or complex integrations, we offer additional support and discounted pricing starting at $500/month.
+								</h3>
 							</div>
 							<div>
 								<h4 class="pa2 h3 fw1">
-									Tailor-made plans and addons for high bandwidth usage
+									UNICEF’s impact in five of the most dangerous crises
 								</h4>
 							</div>
-							<div class="pt4 pb2 tc"><a href="#" class="link pointer f4 pv2 ph4 ba b--blue-20 br2 hover-bg-blue hover-white blue no-underline">Contact Us</a></div>
-						</div>
-					</article><article class="center w-100 w-third-l fl bg-blue mt3 mt0-l" style="border-top-left-radius:10px; border-top-right-radius:10px;">
-						<div class="bg-white shadow-2 mt2  pb3 pb0-l tc">
-							<div class="pa2 h3">
-								<h3 class="f3 ma0">Custom Plan</h3>
-							</div>
-							<div>
-								<h4 class="pa2 h3 fw1">
-									Tailor-made plans and addons for high bandwidth usage
-								</h4>
-							</div>
-							<div class="pt4 pb2 tc"><a href="#" class="link pointer f4 pv2 ph4 ba b--blue-20 br2 hover-bg-blue hover-white blue no-underline">Contact Us</a></div>
+							<div class="pt4 tc"><a href="#" class="link pointer f4 navy no-underline">Read More</a></div>
 						</div>
 					</article>
 				</div>
-			</div>
+    		</div>
     	</section>
+    	<!-- footer -->
+    	<footer>
+    		<div class="footColor pv3 ph3 ph5-ns white">
+    		    <div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">About ImageKit</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Terms of Use</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Privacy Policy</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Disclaimer</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Website analyzer</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Pricing</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Documentation</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Integration with Shopify</a><br>
+					<a class="f5 fw5 link pointer ttc mr2 mr3-m mr4-l dib pv2">Integration for responsive images</a><br>
+    		    </div><div class="w-100 w-25-ns dib v-top pv4-l">
+					<h1 class="f4 fw6 mv0">Have a specific requirement?</h1>
+    				<h3 class="fw4 mt0">Write to us on hello@imagekit.io</h3>
+				    <small class="white pt3">Copyright &copy; ImageKit Private Limited 2017</small>
+    		    </div>
+    		</div>
+    	</footer>
     </main>
 </body>
 </html>
