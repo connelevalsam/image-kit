@@ -5,15 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<style type="text/css">
 		.bgs {
 			background: #F4F5F8;
-		}
-		.bgColour {
-	    	background: #262B37;
-	    }
-		.bgColor:hover {
-			background: #262B37;
 		}
 		.btn {
 			    border-radius: 3px;
@@ -33,30 +28,118 @@
 		.footColor {
 			background: #262B37;
 		}
+		.responsive-menu-open {
+		font-size: 21px;
+		color: #353537;
+		padding: 0 24px;
+		line-height: 34px;
+		height: 44px;
+		float: right;
+		display: none;
+	}
+	.responsive-menu-open:hover {
+		color: #5d6e7b;
+	}
+	.responsive-menu {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		min-width: 100%;
+		background: #fff;
+		z-index: 999;
+		overflow-y: scroll;
+		-webkit-transition: .25s;
+		-moz-transition: .25s;
+		-o-transition: .25s;
+		-ms-transition: .25s;
+		transition: .25s;
+	}
+	.responsive-menu.open {
+		left: 0;
+	}
+	.responsive-menu-close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		font-size: 30px;
+	}
+	.responsive-menu-close:hover {
+		color: #5d6e7b;
+	}
+	@media screen and (min-device-width: 1200px) {
+		.bgColour {
+	    	background: #262B37;
+	    }
+	    .bgColor {
+			color: #333333;
+		}
+		.bgColor:hover {
+			background: #262B37;
+			color: #fff;
+		}
+	}
+	@media all and (max-width: 1200px) {
+	.main-nav {
+		display: none;
+	}
+	.responsive-menu-open {
+		display: inline-block;
+	}
+}
+@media all and (max-width: 768px) {
+	.header .top span, .header .top .links {
+		float: none;
+	}
+	.header .top a {
+		margin-left: 0;
+		margin-right: 18px;
+	}
+	.responsive-menu-open {
+		padding-right: 22px;
+	}
+	.bgColors {
+	    background: #262B37;
+	}
+	.bgColor {
+			color: #fff;
+		}
+		.bgColor:hover {
+			color: #fff;
+		}
 	</style>
 </head>
 <body class="w-100" style="font-family: 'Open Sans',sans-serif;">
     <main class="w-100">
     <!-- Header -->
-    	<header class="w-100 pv3">
-    		<div class="w-100 pv3 ph2 ph5-ns">
-    			<div class="db dtc-ns v-mid fl w-100 w-20-l">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+    	<header class="w-100 ph2 ph5-ns">
+    		<div class="w-100 pv2 cf">
+    			<div class="dtc-l v-mid fl w-70 w-20-l">
+					<a class="dib pt2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
 						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
 					</a>
-				</div><div class="w-100 w-80-l fl cf">
-					<div class="w-100 w-70-l fl v-top">
-						<a href="#" class="f6 fw5 bgColour white br2 pa2 link pointer ttu mr2 mr3-m mr4-l dib no-underline">Features</a>
-						<a href="pricing.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib">Pricing</a>
-						<a href="website-analyzer.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-						<a href="docs.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Documentation</a>
-					</div><div class="fl w-100 w-30-l tc v-top">
-						<a href="login.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Login</a>
-						<a href="signup.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Sign up</a>
+				</div><div class="main-nav w-80-l fl">
+					<div class="w-100 w-70-l fl v-top bgColors">
+						<a href="#" class="f6 fw5 bgColour white br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Features</a>
+						<a href="pricing.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l">Pricing</a>
+						<a href="website-analyzer.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Website Analyzer</a>
+						<a href="docs.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Documentation</a>
+					</div><div class="fl w-100 w-30-l tl tc-l v-top bgColors">
+						<a href="login.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Login</a>
+						<a href="signup.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Sign up</a>
 					</div>
 				</div>
+				<a href="#" class="responsive-menu-open">
+					<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+				</a>
     		</div>
     	</header>
+    	<div class="responsive-menu">
+			<a href="#" class="responsive-menu-close white bg-blue">
+				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+			</a>
+			<nav class="responsive-nav"></nav> <!-- end .responsive-nav -->
+		</div> <!-- end .responsive-menu -->
     	<section class="w-100">
     	<!-- Transforming -->
     		<div class="ph3 ph5-ns pv4 pt5-l tc bt b--black-20 mt3">
@@ -240,5 +323,7 @@
     		</div>
     	</footer>
     </main>
+    <!-- Scripts.js -->
+	<script src="js/scripts.js"></script>
 </body>
 </html>
