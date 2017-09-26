@@ -39,27 +39,128 @@
 		.footColor {
 			background: #262B37;
 		}
+		.responsive-menu-open {
+		font-size: 21px;
+		color: #353537;
+		padding: 0 24px;
+		line-height: 34px;
+		height: 44px;
+		float: right;
+		display: none;
+	}
+	.responsive-menu-open:hover {
+		color: #5d6e7b;
+	}
+	.responsive-menu {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		min-width: 100%;
+		background: #fff;
+		z-index: 999;
+		overflow-y: scroll;
+		-webkit-transition: .25s;
+		-moz-transition: .25s;
+		-o-transition: .25s;
+		-ms-transition: .25s;
+		transition: .25s;
+	}
+	.responsive-menu.open {
+		left: 0;
+	}
+	.responsive-menu-close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		font-size: 30px;
+	}
+	.responsive-menu-close:hover {
+		color: #5d6e7b;
+	}
+	@media screen and (min-device-width: 1200px) {
+		
+	    .bgColor {
+			color: var(--black-50);
+		}
+	}
+	@media all and (max-width: 1200px) {
+	.main-nav {
+		display: none;
+	}
+	.responsive-menu-open {
+		display: inline-block;
+	}
+}
+@media all and (max-width: 768px) {
+	.header .top span, .header .top .links {
+		float: none;
+	}
+	.header .top a {
+		margin-left: 0;
+		margin-right: 18px;
+	}
+	.responsive-menu-open {
+		padding-right: 22px;
+	}
+	.bgColors {
+	    background: #000;
+	}
+	.bgColor {
+			color: #fff;
+		}
+		.bgColor:hover {
+			opacity: .5;
+			transition: opacity .15s ease-in;
+		}
+}
 	</style>
 </head>
 <body class="w-100" style="font-family: 'Open Sans',sans-serif;">
     <main class="w-100">
     <!-- Header -->
     	<header class="w-100 ph2 ph5-ns">
-    		<div class="pt3 cf">
-    			<div class="db dtc-ns v-mid w-20-l fl">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+    		<div class="w-100 pv2 cf">
+    			<div class="dtc-l v-mid fl w-70 w-20-l">
+					<a class="dib pt2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
 						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
 					</a>
-				</div><nav class="db dtc-ns v-mid lh-copy fl w-80-l">
-					<a href="features.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Features</a>
-					<a href="pricing.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Pricing</a>
-					<a href="website-analyzer.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-					<a href="docs.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Documentation</a>
-					<a href="login.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Login</a>
-					<a href="signup.html" class="f6 fw1 link pointer ttu black-50 mr2 mr3-m mr4-l dib no-underline">Sign up</a>
-				</nav>
+				</div><div class="main-nav w-80-l fl">
+					<div class="w-100 pt2 bgColors">
+						<div class="bb b--silver bb-0-l db dib-l">
+						    <a href="features.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db no-underline">Features</a>
+						</div>
+						<div class="bb b--silver bb-0-l db dib-l">
+						    <a href="pricing.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db">Pricing</a>
+						</div>
+						<div class="bb b--silver bb-0-l db dib-l">
+						    <a href="website-analyzer.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db no-underline">Website Analyzer</a>
+						</div>
+						<div class="bb b--silver bb-0-l db dib-l">
+						    <a href="docs.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db no-underline">Documentation</a>
+						</div>
+						<div class="bb b--silver bb-0-l db dib-l">
+						    <a href="login.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db no-underline">Login</a>
+						</div>
+						<div class="db dib-l">
+						    <a href="signup.html" class="f6 fw1 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr4-l db no-underline">Sign up</a>
+					    </div>
+					</div>
+				</div>
+				<a href="#" class="responsive-menu-open">
+					<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+				</a>
     		</div>
-    		<div class="w-100 pt5-ns tc pb5">
+    	</header>
+    	<div class="responsive-menu">
+			<a href="#" class="responsive-menu-close mh3">
+				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+			</a>
+			<nav class="responsive-nav pt5"></nav> <!-- end .responsive-nav -->
+		</div> <!-- end .responsive-menu -->
+    	<!-- content -->
+    	<section class="w-100">
+    	     <div class="w-100 pt5-ns tc pb5">
     			<div class="mh2">
     				<h1 class="black-80 f3 f2-l fw6 ma0">Instant image optimization on all platforms</h1>
 	    			<h2 class="f4 fw2 black-70">Intelligent real time image optimization, resizing, cropping and super fast delivery</h2>
@@ -69,9 +170,6 @@
 	    			</div>
     			</div>
     		</div>
-    	</header>
-    	<!-- content -->
-    	<section class="w-100">
     	<!-- 1 content -->
     		<div class="w-100 bgs ph2 ph5-ns pb2 pb5 pt2-m pt5 cf">
     			<article class="w-100 w-50-l ph2 pb4-m fr-l">
@@ -206,21 +304,7 @@
     		</div>
     	</footer>
     </main>
-    <script type="text/javascript">
-    	var len = $(".customers a").length;
-
-	    setTimeout(function() {
-	        moveCusSlider(3);
-	    },15000);
-
-	    function moveCusSlider(i) {
-	        if(i>len) i = 0;
-	        $(".customers").animate({scrollLeft:i*210}, 500);
-	        if(i==0) i=1;
-	        setTimeout(function() {
-	            moveCusSlider(i*3);
-	        }, 3000);
-	    }
-    </script>
+    <!-- Scripts.js -->
+		<script src="js/scripts.js"></script>
 </body>
 </html>
