@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ImageKit || Website Analyzer</title>
+	<title>ImageKit || Pricing</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<style type="text/css">
 		.bgs {
 			background: #F4F5F8;
 		}
-		.bgColour {
-	    	background: #262B37;
-	    }
-		.bgColor:hover {
-			background: #262B37;
-		}
 		.btn {
 			    border-radius: 3px;
-			    display: inline-block;
+			    display: block;
 			    text-align: center;
 			    cursor: pointer;
 			    color: white;
 			    outline: none;
-			    line-height: 40px;
+			    line-height: 60px;
 			    width: auto;
 			    min-width: 170px;
 			    padding: 0 20px;
@@ -33,74 +28,408 @@
 		.footColor {
 			background: #262B37;
 		}
+		.close-box, .open-info {
+		    display: none;
+		}
+		.closeInfo {
+			 transform: rotateX(180deg); 
+		}
+		.responsive-menu-open {
+			font-size: 21px;
+			color: #353537;
+			padding: 0 24px;
+			line-height: 34px;
+			height: 44px;
+			float: right;
+			display: none;
+		}
+		.responsive-menu-open:hover {
+			color: #5d6e7b;
+		}
+		.responsive-menu {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			min-width: 100%;
+			background: #fff;
+			z-index: 999;
+			overflow-y: scroll;
+			-webkit-transition: .25s;
+			-moz-transition: .25s;
+			-o-transition: .25s;
+			-ms-transition: .25s;
+			transition: .25s;
+		}
+		.responsive-menu.open {
+			left: 0;
+		}
+		.responsive-menu-close {
+			position: absolute;
+			top: 24px;
+			right: 24px;
+			font-size: 30px;
+		}
+		.responsive-menu-close:hover {
+			color: #5d6e7b;
+		}
+		@media screen and (min-device-width: 1200px) {
+			.bgColour {
+		    	background: #262B37;
+		    }
+		    .bgColor {
+				color: #333333;
+			}
+			.bgColor:hover {
+				background: #262B37;
+				color: #fff;
+			}
+		}
+		@media all and (max-width: 1200px) {
+		.main-nav {
+			display: none;
+		}
+		.responsive-menu-open {
+			display: inline-block;
+		}
+	}
+	@media all and (max-width: 768px) {
+		.header .top span, .header .top .links {
+			float: none;
+		}
+		.header .top a {
+			margin-left: 0;
+			margin-right: 18px;
+		}
+		.responsive-menu-open {
+			padding-right: 22px;
+		}
+		.bgColors {
+		    background: #262B37;
+		}
+		.bgColor {
+				color: #fff;
+			}
+			.bgColor:hover {
+				color: #fff;
+			}
+	}
 	</style>
 </head>
-<body class="w-100" style="font-family: 'Open Sans',sans-serif;">
+<body class="w-100" style="font-family: 'Open Sans',sans-serif;" onload="hideDivs()">
     <main class="w-100">
     	<!-- Header -->
-    	<header class="w-100 pv3">
-    		<div class="w-100 pv3 ph2 ph5-ns">
-    			<div class="db dtc-ns v-mid fl w-100 w-20-l">
-					<a class="dib f2 fw3 ph2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
+    	<header class="w-100 ph2 ph5-ns">
+    		<div class="w-100 pv2 cf">
+    			<div class="dtc-l v-mid fl w-70 w-20-l">
+					<a class="dib pt2 mr2 link black-80 calisto" title="ImageKit.cb" href="index.html">
 						<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/logo-dark.png?hash=a498f59e8058270aa124971fd3c79653">
 					</a>
-				</div><div class="w-100 w-80-l fl cf">
-					<div class="w-100 w-70-l fl v-top">
-						<a href="features.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Features</a>
-						<a href="#" class="f6 fw5 bgColour white br2 pa2 link pointer ttu mr2 mr3-m mr4-l dib no-underline">Pricing</a>
-						<a href="website-analyzer.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Website Analyzer</a>
-						<a href="docs.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Documentation</a>
-					</div><div class="fl w-100 w-30-l tc v-top">
-						<a href="login.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Login</a>
-						<a href="signup.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu black-80 mr2 mr3-m mr4-l dib no-underline">Sign up</a>
+				</div><div class="main-nav w-80-l fl">
+					<div class="w-100 w-70-l fl v-top bgColors">
+						<a href="features.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Features</a>
+						<a href="#" class="f6 fw5 bgColour white br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l">Pricing</a>
+						<a href="website-analyzer.html" class="f6 fw5 bgColor br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Website Analyzer</a>
+						<a href="docs.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Documentation</a>
+					</div><div class="fl w-100 w-30-l tl tc-l v-top bgColors">
+						<a href="login.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Login</a>
+						<a href="signup.html" class="f6 fw5 bgColor hover-white br2 pa2 link pointer ttu mv2 mv0-l mr2 mr3-m mr4-l db dib-l no-underline">Sign up</a>
 					</div>
 				</div>
+				<a href="#" class="responsive-menu-open">
+					<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+				</a>
     		</div>
     	</header>
+    	<div class="responsive-menu">
+			<a href="#" class="responsive-menu-close mh3">
+				<img src="https://ik.imagekit.io/demo/imagekitwebsite/static/build/img/landingpage-icons/hamburger-blue.svg?hash=6fe180f63f79722c18ca94928f9d779f">
+			</a>
+			<nav class="responsive-nav pt5"></nav> <!-- end .responsive-nav -->
+		</div> <!-- end .responsive-menu -->
     	<!-- Section -->
-    	<section class="w-100">
+    	<section class="w-100 bt b--black-20 bgs">
     	<!-- container -->
-    		<div class="ph3 ph5-l pv4 pt5-l tc bt b--black-20 mt3">
+    		<div class="ph3 ph5-l pv4 pt5-l tc">
     			<div class="ph3 pt3 center">
     				<h1 class="f1 fw6 black-70">Pricing That Makes Sense</h1>
     				<h5 class="f4 fw4 mv0 black-80">One flat monthly rate for your master images. Unlimited derivative images.</h5>
     			</div>
     			<div class="w-100 pt3 pv5-l cf">
+    			<!-- left article - standard -->
 					<article class="center w-100 w-50-ns fl pr3 br3">
 						<div class="bg-white br3 shadow-2">
 							<div class="pv4" style="background-image: url(http://placehold.it/600x200); border-top-left-radius:8px; border-top-right-radius:8px;">
 								<h1>Standard</h1>
 							</div>
-							<div class="pa2 mv3 bb b--black-20 h3">
-								<h3 class="link pointer f4" href="#">
-								    $3 per 1,000 master images accessed each month. 8¢ per GB of CDN bandwidth for images delivered each month.
+							<div class="pa2 bb b--black-20" style="height: 160px;">
+								<h3 class="f4 fw6 black-80">
+								    <span class="black f3">$3</span>per 1,000 master images accessed each month. <span class="black f3">8¢</span> per GB of CDN bandwidth for images delivered each month.
 								</h3>
 							</div>
-							<div>
-								<h4 class="pa2 h3 fw1">
-									lorem ipsum
-								</h4>
+							<!-- standard contents -->
+							<div class="ph4">
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Risk-free trial: no credit card required to sign up, $10 credit, cancel anytime
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+									    Over 100 image processing operations available via the <a href="#" class="link pointer blu" style="color: #3E82F7;">imgix Image URL API</a>
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Globally distributed content delivery network to efficiently serve images to your customers
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Smoothly integrate using our client libraries, framework plugins, examples, and API documentation
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+									    Account-level analytics to track usage &amp; spending over time
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Monthly billing with secure credit card payments
+									</h4>
+								</div>
+								<div class="pv4 tc"><a href="#" class="f3 fw6 btn no-underline bg-yellow">Get Started for Free</a></div>
 							</div>
-							<div class="pt4 tc"><a href="#" class="link pointer f4 navy no-underline">Read More</a></div>
 						</div>
-					</article><article class="center w-100 w-50-ns pl3 fl br3" >
+					</article><article class="center w-100 w-50-ns pl3 fl br3" ><!-- right article - premium -->
 						<div class="bg-white br3 shadow-2">
-							<div class="pv4" style="background-image: url(http://placehold.it/600x200); border-top-left-radius:8px; border-top-right-radius:8px;">
+							<div class="pv4 cover" style="background-image: url(http://placehold.it/600x200); border-top-left-radius:8px; border-top-right-radius:8px;">
 								<h1>Premium</h1>
 							</div>
-							<div class="pa2 h3">
-								<h3 class="link pointer f4" href="#">
+							<div class="pa2 bb b--black-20" style="height: 160px;">
+								<h3 class="f4 fw6 black-80">
 									For high volume, high bandwidth, or complex integrations, we offer additional support and discounted pricing starting at $500/month.
 								</h3>
 							</div>
-							<div>
-								<h4 class="pa2 h3 fw1">
-									lorem ipsum
-								</h4>
+							<!-- premium contents -->
+							<div class="ph4">
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Dedicated account manager
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+									    Expanded support options for incident response and integration assistance
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Custom pricing plans tailored to your business
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Service Level Agreement for uptime
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+									    Detailed image logs for more granular tracking
+									</h4>
+								</div>
+								<div class="pv2 h4 measure tl">
+									<h4 class="f4 black-50">
+										Monthly invoices; payable by check, ACH, or wire transfer
+									</h4>
+								</div>
+								<div class="pv4 tc"><a href="#" class="f3 fw6 btn no-underline">Contact Sales</a></div>
 							</div>
-							<div class="pt4 tc"><a href="#" class="link pointer f4 navy no-underline">Read More</a></div>
 						</div>
 					</article>
+				</div>
+				<!-- FAQ section -->
+				<div>
+					<div class="ph3 pv3 center">
+	    				<h1 class="f2 fw6 black-70">Pricing Frequently Asked Questions</h1>
+	    				<h5 class="f4 fw4 mv0 black-80">Calculating Charges</h5>
+	    			</div>
+	    			<div class="w-100 bgs pv3">
+	    			    <!-- predefined svg -->
+	    			    <svg style="display:none">
+						  <defs>
+						    <path id="arrow" d="M8.485 7.142l7.07-7.07 1.416 1.413L8.487 9.97l-.707-.707L0 1.485 1.414.07l7.07 7.072z" fill="#213543" fill-rule="evenodd" fill-opacity=".7"/>
+						  </defs>
+						</svg>
+	    			    <!--  -->
+	    				<div class="w-100 w-50-ns dib ph4 v-top"> <!-- left div -->
+	    				<!-- master image -->
+	    				    <div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+		    				    <span>What is a master image?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+		    					<div class="pa2 open-info">
+		    						<span class="measure">
+		    							A master image is any image used by imgix to create and deliver derivative images. You can store master images in an Amazon S3 bucket, a web folder on your website, or any other addressable web storage location that you control.
+		    						</span>
+		    					</div>
+		    				</div>
+		    			<!-- derivative image -->
+		    			    <div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span>What is a derivative image?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<span class="measure">
+			                    	    A derivative image is created in response to an imgix request. We fetch a master image (either from your image location or from our caches) and process, transform, and format it to your specifications into the image that is delivered to your users. Each derivative can have multiple parameters assigned.
+			                    	</span>
+			                    </div>
+	    					</div>
+	    				<!-- cost change -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span>How will my costs change over time?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<span class="measure">
+			                    	    Our pricing is designed to grow with you in a way that is easy to understand and predict. You can create as many derivative variations of an image as you need (and use as many parameters per derivative as you want), at no extra cost. We charge for the bandwidth to deliver derivatives to your customers, but not to create them. This means your costs do not change if you suddenly need a new image size or want to take advantage of more features in imgix.
+			                    	</span>
+			                    </div>
+	    					</div>
+	    				<!-- using tiny -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span class="dib mw6">How does using imgix.js (or other responsive image libraries) impact my costs?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<span class="measure">
+			                    	    Responsive image libraries like imgix.js abstract away the complexity of targeting your images at the ever-increasing number of web-enabled devices. However, using solutions like imgix.js can trigger the creation of a lot of new derivatives to satisfy every variety of device.
+			                    	</span>
+			                    	<span class="measure pt2">
+			                    	    Fortunately, imgix’s pricing is designed to encourage this behavior, not discourage it, by pricing against master images and not the derivative images that are created. Using imgix.js is actually more likely to reduce your costs with regard to bandwidth by more efficiently sizing and formatting your images to the specific devices on which they are being viewed.
+			                    	</span>
+			                    </div>
+	    					</div>
+		    			</div><div class="w-100 w-50-ns dib ph4 v-top"> <!-- ============== right div =========== -->
+		    			<!-- master image price -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span>What is included in the master image price?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<span class="measure">
+			                    	    The master image pricing includes all fetching, retargeting, processing, reformatting, caching, and analysis of your master images within each monthly billing cycle. You can use as many derivatives (image sizes, transformations, output formats, etc.) per image as you want without incurring additional master image charges. For instance, if you have 5 thumbnail sizes for your images and decide to add a 6th, there would be no additional charge.
+			                    	</span>
+			                    	<span class="measure pt2">
+			                    	    We only charge for master images that are actually requested in a given billing cycle. We don’t penalize you for carrying a long tail of infrequently-accessed images as you grow.
+			                    	</span>
+			                    </div>
+	    					</div>
+	    				<!-- watermark -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span class="dib mw6">How are watermarks, blends, and other multiple-image operations handled when it comes to pricing?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<ul class="measure">
+			                    	    <li>
+			                    	    	Images that are used as overlays, watermarks, etc. will count as master images even if they are not addressed or served directly. For example, if you have 5 images of cars and 1 image of a logo, and you use the logo as a watermark on each of the car photos, you would be billed for 6 master images. The logo image may never be delivered directly, but still counts as an master image since it is fetched to render the logo watermark.
+			                    	    </li>
+			                    	</ul>
+			                    </div>
+	    					</div>
+	    				<!-- pricing example -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span>Can you show me a pricing example?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<span class="measure">
+			                    	    Sure—let’s take a look at a simplified setup.
+			                    	</span>
+			                    	<ul>
+			                    		<li>
+			                    			You have 50,000 master images in your imgix Source
+			                    		</li>
+			                    		<li>
+			                    			35,000 of your masters are fetched in a 1-month billing cycle (these are the only ones you are charged for)
+			                    		</li>
+			                    		<li>
+			                    			Each of the fetched masters is generated in 2 derivative versions—one large at 150kB and 1 small at 30kB, and each derivative is accessed 500 times during the month by your users
+			                    		</li>
+			                    	</ul>
+			                    	<span class="measure">
+			                    	    Here’s how the costs work out for a month with these parameters:
+			                    	</span>
+			                    	<ul>
+			                    		<li>
+			                    			Master Images: 35,000 @ $3/1000 images: $105.00
+			                    		</li>
+			                    		<li>
+			                    			Bandwidth:
+			                    			<ul>
+			                    				<li>
+			                    					Large image: 150kB x 35,000 images x 500 views = 2625GB @ $0.08/GB: $210.00
+			                    				</li>
+			                    				<li>
+			                    					Small image: 35kB x 35,000 images x 500 views = 612.5GB @ $0.08/GB: $49.00
+			                    				</li>
+			                    			</ul>
+			                    		</li>
+			                    		<li>
+			                    			Total for the month: $364.00
+			                    		</li>
+			                    	</ul>
+			                    </div>
+	    					</div>
+	    				<!-- overwrite master image -->
+	    					<div class="ba b--black-20 tl mv3 ph2 pv3 cf pointer">
+	    					    <span>What if I overwrite and replace a master image?</span>
+	    						<svg width="17" height="10" viewBox="0 0 17 10" class="fr open-box">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <svg width="17" height="10" viewBox="0 0 17 10" class="fr close-box closeInfo">
+			                        <use href="#arrow"/>
+			                    </svg>
+			                    <div class="pa2 open-info">
+			                    	<ul class="measure">
+			                    	    <li>
+			                    	    	Because the image content has changed, it would be considered a new master image in our system if requested and would be billed accordingly.
+			                    	    </li>
+			                    	</ul>
+			                    </div>
+	    					</div>
+	    				</div>
+	    			</div>
 				</div>
     		</div>
     	</section>
@@ -127,5 +456,7 @@
     		</div>
     	</footer>
     </main>
+    <!-- Scripts.js -->
+	<script src="js/scripts.js"></script>
 </body>
 </html>
